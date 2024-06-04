@@ -9,8 +9,9 @@ if (localStorage.getItem("token") == null) {
   logado.innerHTML = `Olá ${userLogado.nome}`;
   
   function sair() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userLogado");
+    // Limpar o cache de informações do aplicativo
+    localStorage.clear(); // Remove todos os itens do localStorage
+    // Redirecionar para a tela de login
     window.location.href = "./assets/html/LOGIN.html";
   }
 
